@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main(void)
+{
+	for(int j=0; j<256;j++)
+	{
+  	printf("\033[48;5;%dm",j);
+  	printf("Hello world\n");
+  	}
+  return (0);
+}

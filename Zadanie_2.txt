@@ -1,0 +1,8 @@
+#!/bin/bash
+for filename in `ls $1`;
+do
+if [[ "${filename}" =~ [[:upper:]] ]]; then
+targetname=${1}/`echo $filename | tr [:upper:] [:lower:]`;
+mv -T ${1}/${filename} ${targetname};
+fi
+done
